@@ -1,0 +1,58 @@
+\documentclass{amia}
+\usepackage{graphicx}
+\usepackage[labelfont=bf]{caption}
+\usepackage[superscript,nomove]{cite}
+\usepackage{color}
+
+
+\begin{document}
+
+\noindent{\bf Abstract (50-75 words, do not include in 1-page submission)}
+
+\textit{Through a worked case study of an R package and Shiny dashboard for self-service health authority submission quality duration estimates, we lay a framework for robust efficiency. We make recommendations on 1) transparent and robust cohort definitions, 2) defensive restriction of user inputs to maintain results integrity, 3) the importance of separating scientific logic into a documented and tested independent package, 4) and a strategy for clear communication of validation scope and assumptions.}
+
+After the poster session, the learner should be better able to:
+
+\begin{itemize}
+  \item Understand the importance of isolating, testing and documenting scientific logic as independent of graphical user interface code
+  \item Have an understanding of unit testing, 
+\end{itemize}
+
+\pagebreak
+
+\title{Case study in the development of a framework for quality and reproducibility in inner-sourced packages and self-service analytic dashboards to accelerate common study types}
+
+\author{James A. Black, PhD^{1}$, Adam J. Foryś, PhD^{2}$, Sriraman Madhavan^{3}$, Kamil Wais^{2}$}
+
+\institutes{
+    $^1$Personalised Healthcare Analytics, Roche, Switzerland; $^2$7N Consulting, Poland; $^3$Personalised Healthcare Analytics, Genentech, United States\\
+}
+
+\maketitle
+
+\section*{Introduction}
+
+Replicability of a research question and reproducibility of individual studies are hampered in studies due to the diversity in the code that sits between a statistical analysis plan and a result. We propose a set principles that can be immediately implemented to boost efficiency. 
+
+\section*{Principles}
+
+\begin{description}
+  \item[Code has value:] The use of ad-hoc code within a study should be minimised, 
+  \item[Democratise access to analytics:]
+  \item[Assertively limit user inputs in dashboards:]
+  \item[Separate logic from the user interface:] The second item
+  \item[Meaningful unit test coverage should be written at function creation:] third
+\end{description}
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{pics/abstract_image.png}
+\caption{Framework for efficiency in running routine study types while maintaining robust and validated results}
+\label{fig1}
+\end{figure}
+
+\section*{Conclusion}
+By applying these principles to a common study data type, the estimation of duration of treatment in real world settings using routinely collected data, we were able to accelerate time to deliver study results from months to days, while improving robustness and standardisation via well documented and tested code.
+
+\end{document}
