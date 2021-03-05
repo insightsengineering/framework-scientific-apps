@@ -22,7 +22,7 @@ After the poster session, the learner should be better able to:
 
 \title{Case study in the development of a framework for quality and reproducibility in inner-sourced packages and self-service analytic dashboards to accelerate common study types}
 
-\author{James A. Black, PhD^{1}$, Sriraman Madhavan^{3}$, Adam J. Foryś, PhD^{2}$, Nayan Chaudhary^{3}$, Kamil Wais^{2}$}
+\author{James A. Black, PhD^{1}$, Sriraman Madhavan^{3}$, Adam J. Foryś, PhD^{2}$, Nayan Chaudhary^{3}$, Kamil Wais^{2}$} 
 
 \institutes{
     $^1$Personalised Healthcare Analytics, Roche, Switzerland; $^2$7N Consulting, Poland; $^3$Personalised Healthcare Analytics, Genentech, United States\\
@@ -35,11 +35,11 @@ After the poster session, the learner should be better able to:
 Replicability of a research question and reproducibility of individual studies are hampered in studies due to the diversity in the code that sits between a statistical analysis plan and a result. We propose a set principles that can be immediately implemented to boost efficiency. 
 
 \begin{description}
-  \item[Code has value:] The use of ad-hoc code within a study should be minimised, and a culture promoted of collaboration on pan-study code in documented packages for reuse. Unit tests are ideally written at function creation, and reviewed and expanded with new use cases.
-  \item[Democratise access to analytics:] Aided by the consolidation of packages, less technical users should be given access to well documented packages to promote guided analyses, as well as dashboards considered for fully self-service interaction.
+  \item[Code has value:] The use of ad hoc code within a study should be minimised, and a culture promoted of collaboration on pan-study code in documented packages for reuse. Unit tests are ideally written at function creation, and reviewed and expanded with new use cases.
+  \item[Democratise access to analytics:] Aided by the consolidation of code into packages, less technical users should be given access to well documented packages to promote guided analyses, as well as dashboards considered for fully self-service interaction.
   \item[Be verbose and specific on input cohorts:] Publish cohort derivation code as user readable markdown vignettes with descriptive statistics and assumption checks.
-  \item[Assertively limit user inputs in dashboards:] Developers should ensure that variables exposed for manipulation in the app are limited to variance that 
-  \item[Separate logic from the user interface:] As shown in Figure ~\ref{fig1}, scientific logic should be separated from visualisation code. This loosely coupled approach improves the general robustness of the system by making it easier to isolate, test and document any logic applied to the data.
+  \item[Assertively limit user inputs in dashboards:] Developers should ensure that variables exposed for manipulation in the app can be varied without comprimsing validation.
+  \item[Separate logic from the user interface:] As shown in Figure ~\ref{fig1}, scientific logic should be separated from visualisation code. This loosely coupled approach improves the robustness of the system by making it easier to isolate, test and document any logic applied to the data.
 \end{description}
 
 
