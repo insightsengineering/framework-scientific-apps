@@ -38,19 +38,18 @@ Replicability of a research question and reproducibility of individual studies a
   \item[Code has value:] The use of ad hoc code within a study should be minimised, and a culture promoted of collaboration on pan-study code in documented packages for reuse. Unit tests are ideally written at function creation, and reviewed and expanded with new use cases.
   \item[Democratise access to analytics:] Aided by the consolidation of code into packages, less technical users should be given access to well documented packages to promote guided analyses, as well as dashboards considered for fully self-service interaction.
   \item[Be verbose and specific on input cohorts:] Publish cohort derivation code as user readable markdown vignettes with descriptive statistics and assumption checks.
-  \item[Assertively limit user inputs in dashboards:] Developers should ensure that variables exposed for manipulation in the app can be varied without comprimsing validation.
-  \item[Separate logic from the user interface:] As shown in Figure ~\ref{fig1}, scientific logic should be separated from visualisation code. This loosely coupled approach improves the robustness of the system by making it easier to isolate, test and document any logic applied to the data.
+  \item[Assertively limit user inputs in dashboards:] Developers should ensure that variables exposed for manipulation in the app can be varied without compromising validation.
+  \item[Separate logic from the user interface:] As shown in , scientific logic should be separated from visualisation code. This loosely coupled approach improves the robustness of the system by making it easier to isolate, test and document any logic applied to the data.
 \end{description}
 
+\section*{Case study}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{pics/abstract_image.png}
-\caption{Framework for efficiency in running routine study types while maintaining robust and validated results}
-\label{fig1}
-\end{figure}
-
-\section*{Conclusion}
 By applying these principles to a common study data type, the estimation of duration of treatment in real world settings using routinely collected data, we were able to accelerate time to deliver study results from months to days, while improving robustness and standardisation via well documented and tested code.
+
+In this case study we wrapped repeated study code into a robust and unit tested R package (\textbf{Code has value}), which contained all scientific business logic (\textbf{Separate logic from the user interface}).  When then created a de-coupled interactive user interface via Shiny (\textbf{Democratise access to analytics}). Within Shiny we controlled inputs, to ensure the underlying R package was used within a valid scope (\textbf{Assertively limit user inputs in dashboards}). In addition to logic required for the final app, the R package contained vignettes that defined and provided documentation metadata for versioned cohorts. These versioned cohorts, and the accompanying metadata, were then ingested by the app \textbf{(Be verbose and specific on input cohorts}).
+
+\section*{Discussion}
+
+These principles provided a mechanism to improve the reliability of our code, and had an important secondary effect of providing a clear framework to communicate with stakeholders and between data scientists steps taken to improve quality and reproducibility of internal study dashboards.
 
 \end{document}
